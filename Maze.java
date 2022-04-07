@@ -75,7 +75,7 @@ public class Maze
                 || currentRow >= grid.length || currentCol >= grid[currentRow].length)
             {
                 done = true;
-                System.out.println("MESSAGE 2"); // Out of bounds.
+                System.out.println("MESSAGE 2 -> shut up"); // Out of bounds.
             }
             else
             {
