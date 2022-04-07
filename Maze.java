@@ -68,7 +68,7 @@ public class Maze
                     break;
             
                 default:
-                    System.out.println("MESSAGE 1"); // Invalid direction.
+                    System.out.println("MESSAGE 1 -> ur mumma"); // Invalid direction.
             }
             
             if(currentRow < 0 || currentCol < 0
