@@ -36,8 +36,8 @@ public class Maze
         System.out.print("Your solution: ");
         solution = sc.nextLine();
         
-        int currentRow = 1;
-        int currentCol = 0;
+        int Row = 1;
+        int Col = 0;
         boolean done = false;
         boolean solved = false;
         int charIndex = 0;
@@ -69,12 +69,11 @@ public class Maze
             
                 default:
                     System.out.println("MESSAGE 1 -> ur mumma"); // Invalid direction.
-            }
-            
-            switch(grid[currentRow][currentCol])
+            }         
+            switch(grid[Row][Col])
             {
                 case Maze.EMPTY:
-                    grid[currentRow][currentCol] = Maze.VISTED;
+                    grid[Row][Col] = Maze.VISTED;
                     break;
                 case Maze.WALL:
                     done = true;
