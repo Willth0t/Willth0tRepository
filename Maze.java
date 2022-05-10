@@ -71,33 +71,23 @@ public class Maze
                     System.out.println("MESSAGE 1 -> ur mumma"); // Invalid direction.
             }
             
-            if(currentRow < 0 || currentCol < 0
-                || currentRow >= grid.length || currentCol >= grid[currentRow].length)
+            switch(grid[currentRow][currentCol])
             {
-                done = true;
-                System.out.println("MESSAGE 2 -> shut up"); // Out of bounds.
-            }
-            else
-            {
-                if(grid[currentRow][currentCol] == EMPTY)
-                {
-                    grid[currentRow][currentCol] = VISITED;
-                }
-                else if(grid[currentRow][currentCol] == WALL)
-                {
+                case Maze.EMPTY:
+                    grid[currentRow][currentCol] = Maze.VISTED;
+                    break;
+                case Maze.WALL:
                     done = true;
-                    System.out.println("MESSAGE 3"); // Hit wall.
-                }
-                else if(grid[currentRow][currentCol] == END)
-                {
+                    System.out.println("you stumble blindly into a solid concrete wall.");
+                    break;
+                case Maze.END:
                     done = true;
                     solved = true;
-                    System.out.println("MESSAGE 4"); // Solved.
-                }
-                else
-                {} // Do nothing
-            }
+                    Sysyem.out.println("SOLVED");
+                    break;
+                default:
             
+            }
             charIndex++;
         }
         
